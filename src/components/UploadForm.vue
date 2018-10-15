@@ -1,6 +1,7 @@
 <template>
-    <div>
-UploadForm
+    <div class="dropper">
+        <input type="file"  />
+        <span>drag and drop here</span>
     </div>
 </template>
 
@@ -9,3 +10,23 @@ export default {
     name:'UploadForm'
 }
 </script>
+<style scoped>
+    .dropper{
+        height: 30vh;
+        border: 2px dashed black;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .dropper:hover{
+        background-color: #eee;
+    }
+    input{
+        position: absolute;
+        width: 100%;
+        height: 30vh;
+        opacity: 0;
+    }
+</style>

@@ -19,7 +19,8 @@ const actions = {
     logout : ({commit})=>{
         commit('setToken',null);
         window.localStorage.removeItem('imgur_token');
-
+        router.push('/');
+        
     } ,
     finalizeLoggin: ({commit},hash) => {
        const QS = qs.parse( hash.replace('#',''));
